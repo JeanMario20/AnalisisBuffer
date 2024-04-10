@@ -1,0 +1,88 @@
+<div style="padding-top: 0px; padding-bottom: 0px;">
+  <table class="setting-table input-table" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="first">
+          <span class="label">Elemento a analizar</span>
+        </td>
+        <td class="first">
+            <select data-dojo-type="jimu/dijit/formSelect" title="Ductos" data-dojo-attach-point="ductSelect"
+            data-dojo-attach-event="change:_onDuctSelectChanged" style="width:70%;">
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="first">
+          <span class="label">Capas para análisis</span>
+        </td>
+        <td class="first">
+          <input type="text" data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="placeholder"
+            data-dojo-attach-event="Blur: _onPlaceholderBlur"
+            placeHolder="${nls.placeholder}" data-dojo-props='style:{width:"100%"}'/>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="first" style="height:20px;">
+          <span class="label" >Especifición de área de análisis</span>
+        </td>
+        <td class="first" style="height:25px;">
+          <span class="label">Tipo de Buffer</span>
+        </td>
+        <td class="first">
+          <select data-dojo-type="jimu/dijit/formSelect" title="Plano/Redondo" data-dojo-attach-point="tipoBufferSelect"
+              style="width:70%;">
+            <option value="Plano" selected>Plano</option>
+            <option value="Redondo">Redondo</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="first">
+          <span class="label">Zona de Buffer(con respecto al Origen - Destino del elemento)</span>
+        </td>
+        <td class="first">
+          <select data-dojo-type="jimu/dijit/formSelect" title="Plano/Redondo" data-dojo-attach-point="zonaBufferSelect"
+              style="width:70%;">
+            <option value="Ambos" selected>Ambos</option>
+            <option value="Izquierda">Izquierda</option>
+            <option value="Derecha">Derecha</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="first">
+          <span class="label">Medidas</span>
+        </td>
+        <td class="first">
+          <div style="width:28%;">
+            <div data-dojo-type="dijit/form/TextBox" data-dojo-props="value: 15" style="width:90%;" data-dojo-attach-point="distanceBuffer1"></div>
+          </div>
+          <div  style="width:50%;">
+            <select data-dojo-type="jimu/dijit/formSelect" style="width:84%;" data-dojo-attach-point="unitSelect"
+                data-dojo-attach-event="change:_onUnitSelectChanged">              
+              <option value="meters">${nls.meters}</option>
+              <option value="kilometers">${nls.kilometers}</option>
+            </select>
+          </div>
+        </td>
+        <td class="first">
+          <div style="width:50%;">
+            <div data-dojo-type="dijit/form/TextBox" data-dojo-props="value: 25" style="width:50%;" data-dojo-attach-point="distanceBuffer2"></div>
+          </div>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="first">
+          <div class="operations" style="padding: 0px 5px;" onselectstart="return false;">
+            <div role="button" class="jimu-btn lastFocusNode"  data-dojo-attach-point="ejecutarAnalisisBtn" data-dojo-attach-event="onclick:ejecutarAnalisis, onkeydown:ejecutarAnalisisKeydown" tabindex="0">Ejecutar Análisis</div>
+            <div role="button" class="jimu-btn lastFocusNode"  data-dojo-attach-point="informeBtn" data-dojo-attach-event="onclick:informe, onkeydown:informeKeydown" tabindex="1">Informe</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
