@@ -1,0 +1,23 @@
+
+.jimu-widget-analisis_buffer-setting{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.jimu-widget-analisis_buffer-setting .control-area {
+  width: 200px;
+  height: 100%;
+}
+.jimu-widget-analisis_buffer-setting .container {
+  left: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.jimu-widget-analisis_buffer-setting .container .lm_goldenlayout {
+  z-index: 300;
+}
+.jimu-widget-analisis_buffer-setting .grid-label {
+  color: white;
+}
